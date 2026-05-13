@@ -1,0 +1,82 @@
+{
+  "id": "jeremy-training-log-2024",
+  "name": "Jeremy's Training Log",
+  "short_name": "Training Log",
+  "description": "Personal strength and conditioning tracker — Rogan circuit, barbell work, pull-up progression, core, and mobility.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "background_color": "#0f0f0f",
+  "theme_color": "#0f0f0f",
+  "orientation": "portrait",
+  "dir": "ltr",
+  "lang": "en-US",
+  "categories": ["health", "fitness", "sports"],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "prefer_related_applications": false,
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-today.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Today's workout — Rogan circuit with exercise logging"
+    },
+    {
+      "src": "screenshot-strength.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Barbell push day with pull-up progression tracker"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today's Workout",
+      "short_name": "Today",
+      "description": "Jump straight to today's session",
+      "url": "./index.html#today",
+      "icons": [{ "src": "icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Session History",
+      "short_name": "History",
+      "description": "View past workout sessions",
+      "url": "./index.html#history",
+      "icons": [{ "src": "icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Stats & PRs",
+      "short_name": "Stats",
+      "description": "View personal records and progress",
+      "url": "./index.html#stats",
+      "icons": [{ "src": "icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text"
+    }
+  }
+}
