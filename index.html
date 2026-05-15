@@ -447,8 +447,8 @@ function renderExBlock(ex,ei,saved){
   const savedSets=saved.sets&&saved.sets[ei]?saved.sets[ei]:ex.defaultSets.map(s=>({...s,done:false}));
   const prevBest=getPrevBest(ex.name,getDateKey(currentDate));
   const isBW=ex.unit==='bw';
-  const firstRep=savedSets[0]?savedSets[0].reps:(ex.defaultSets[0]?ex.defaultSets[0].reps:30);
-  const timerBtn=ex.timedEx?`<button class="ex-timer-btn" onclick="event.stopPropagation();launchExTimer(${firstRep||30},'${ex.name.replace(/'/g,"\\'")}')">&blacktriangleright; Timer</button>`:'';
+  const defaultSecs=ex.defaultSets[0]?ex.defaultSets[0].reps:30;
+  const timerBtn=ex.timedEx?`<button class="ex-timer-btn" onclick="event.stopPropagation();(function(){const inp=document.querySelector('#sets-${ei} tr input[type=number]');const val=inp&&inp.value&&parseInt(inp.value)>0?parseInt(inp.value):${defaultSecs||30};launchExTimer(val,'${ex.name.replace(/'/g,"\\'")}');})()">&blacktriangleright; Timer</button>`:'';
   let b=`<div class="ex-block${ex.isCore?' core-ex':''}" id="ex-${ei}">
     <div class="ex-header" onclick="toggleEx(${ei})">
       <div><div class="ex-name">${ex.name}</div><div class="ex-note">${ex.note}</div></div>
